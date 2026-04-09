@@ -21,11 +21,11 @@ export default function NotesPanel({ monthKey }) {
             <textarea
                 value={notes}
                 onChange={handleChange}
-                className="w-full h-64 bg-transparent outline-none resize-none text-gray-700 font-medium whitespace-pre-wrap"
+                className="w-full h-32 md:h-48 bg-transparent outline-none resize-none text-gray-700 font-medium whitespace-pre-wrap"
                 style={{
-                    lineHeight: '2.5rem',
-                    backgroundImage: 'linear-gradient(transparent, transparent calc(2.5rem - 1px), #d1d5db 0px)',
-                    backgroundSize: '100% 2.5rem'
+                    lineHeight: '2rem',
+                    backgroundImage: 'linear-gradient(transparent, transparent calc(2rem - 1px), #d1d5db 0px)',
+                    backgroundSize: '100% 2rem'
                 }}
             />
         </div>

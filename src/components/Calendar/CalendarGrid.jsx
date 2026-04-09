@@ -4,13 +4,13 @@ import { holidays, themes } from "../../constants/calendarData";
 export default function CalendarGrid({ days, startDate, endDate, currentDateState, currImage, animKey, isInRange, handleDateClick }) {
     return (
         <>
-            <div className="grid grid-cols-7 text-center text-xs sm:text-sm font-bold mb-4 sm:mb-6 tracking-wide">
-                {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((d, col) => (
-                    <div key={d} className={`transition-colors duration-500 ${(col >= 5) ? themes[currImage].text : "text-gray-600"}`}>{d}</div>
+            <div key={`grid-${animKey}`} className="grid grid-cols-7 gap-y-2 gap-x-1 sm:gap-x-2 w-full pt-4">
+                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d, col) => (
+                    <div key={`header-${d}`} className={`flex items-center justify-center font-bold text-[12px] sm:text-[14px] md:text-[15px] pb-2 mb-2 border-b-2 border-gray-200 tracking-wider transition-colors duration-500 ${(col >= 5) ? themes[currImage].text : "text-gray-600"}`}>
+                        {d}
+                    </div>
                 ))}
-            </div>
 
-            <div key={`grid-${animKey}`} className="grid grid-cols-7 gap-y-4 sm:gap-y-6 gap-x-1 sm:gap-x-2">
                 {days.map((day, idx) => {
                     const isStart = startDate && isSameDay(day, startDate);
                     const isEnd = endDate && isSameDay(day, endDate);
