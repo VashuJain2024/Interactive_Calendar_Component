@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 
-export default function NotesPanel() {
+export default function NotesPanel({ monthKey }) {
     const [notes, setNotes] = useState("");
 
+    const storageKey = `calendar-notes-${monthKey}`;
+
     useEffect(() => {
-        const saved = localStorage.getItem("calendar-notes");
-        if (saved) setNotes(saved);
-    }, []);
+        const saved = localStorage.getItem(storageKey);
+        setNotes(saved || "");
+    }, [storageKey]);
 
     const handleChange = (e) => {
         setNotes(e.target.value);
-        localStorage.setItem("calendar-notes", e.target.value);
+        localStorage.setItem(storageKey, e.target.value);
     };
 
     return (

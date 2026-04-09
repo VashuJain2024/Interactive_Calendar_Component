@@ -1,11 +1,11 @@
-import Calendar from './components/Calendar.jsx'
+import HomePage from './pages/HomePage'
 import './App.css'
 
 const App = () => {
   return (
-    <div className='bg-gray-200 py-12 flex flex-col items-center justify-center font-sans'>
-      <Calendar />
-    </div>
+    <>
+      <HomePage />
+    </>
   )
 }
 
