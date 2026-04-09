@@ -10,7 +10,7 @@ export default function CalendarHeader({ currentDateState, currImage, animKey })
                 key={`img-${currImage}`}
                 className="absolute top-0 left-0 w-full h-[350px] sm:h-[500px] md:h-[700px] transition-all duration-700 opacity-90 hover:opacity-100 animate-fade"
                 style={{
-                    backgroundImage: `url('src/assets/${images[currImage]}')`,
+                    backgroundImage: `url('${images[currImage]}')`,
                     backgroundSize: 'cover',
                     backgroundPosition: '70% 70%',
                     clipPath: "polygon(0px 0px, 100% 0px, 100% 55%, 33% 100%, 0% 60%)"
