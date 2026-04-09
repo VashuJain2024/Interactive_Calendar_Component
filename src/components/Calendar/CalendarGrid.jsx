@@ -38,11 +38,11 @@ export default function CalendarGrid({ days, startDate, endDate, currentDateStat
                     }
 
                     return (
-                        <div key={idx} className="flex flex-col items-center justify-start h-10 sm:h-12 relative group">
+                        <div key={idx} className="flex flex-col items-center justify-start h-12 sm:h-14 relative group">
                             <div
                                 onClick={() => handleDateClick(day)}
                                 className={`
-                                    flex justify-center items-center h-8 w-8 sm:h-10 sm:w-10 cursor-pointer rounded-full text-sm sm:text-base
+                                    flex justify-center items-center h-10 w-10 sm:h-12 sm:w-12 cursor-pointer rounded-full text-base sm:text-lg
                                     transition-all duration-300 ease-in-out
                                     ${bgClass}
                                     ${textColorClass}
